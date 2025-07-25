@@ -37,30 +37,6 @@
     <input type="number" id="Result" class="result_w" />
     <br /><br />
 
-    <!------------------------------------------  Fetching users from a JSON file (START)-->
-    <!-- <input type="button" id="FetchUsers" value="Fetch Users" onclick="fetchUsers()" /> -->
-    <!-- <div id="usersList"></div> -->
-    <!-- <script>
-      // function fetchUsers() {
-      // fetch('users.json')
-      //   .then(response => response.text())
-      //   .then(data => {
-      //   document.getElementById('usersList').innerHTML = data;
-      //   })
-      //   .catch(error => {
-      //   document.getElementById('usersList').innerHTML = 'Error fetching users.';
-      //   });
-      // }
-    </script> -->
-    <!------------------------------------------ Fetching users from a JSON file (END)-->
-
-
-
-
-
-    
-
-
     <script>
       function GetResult() {
         var num1 = document.getElementById("num1").value;
@@ -80,8 +56,9 @@
         document.getElementById("Result").value = result;
       }
     </script>
-    <!----------------------------------------------------------------------------------------------->
 
+
+    <!----------------------------------------------------------------------------------------------->
     <script>
       fetch("footer.html")
         .then((response) => response.text())
@@ -90,31 +67,5 @@
         });
     </script>
 
-
-    <!----------------------------------------------------------------------------------------------->
-
-    <input
-      type="button"
-      id="FetchData"
-      value="Fetch Data"
-      onclick="fetchData()"
-    />
-
-    <script>
-      function fetchData() {
-        fetch("USERS.json")
-          .then((response) => {
-            console.log(response.status); // 200
-            console.log(response.ok); // true
-            return response.json(); // extract the usable data
-          })
-          .then((data) => {
-            console.log(data); // the actual content from 'data.json'
-          })
-          .catch((error) => {
-            console.error("Error fetching data:", error);
-          });
-      }
-    </script>
   </body>
 </html>

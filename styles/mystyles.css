@@ -62,6 +62,15 @@ input[type="password"] {
     border-radius: 5px;
 }
 
+.link_ww {
+    color: rgb(235, 176, 94);
+    text-decoration: none;
+    /* font-weight: bold; */
+    background-color: rgb(114, 16, 16);
+    padding: 10px;
+    border-radius: 5px;
+}
+
 footer {
   position: fixed;
   left: 0;
