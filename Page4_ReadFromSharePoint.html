@@ -1,0 +1,19 @@
+<script type="text/javascript">
+  function getEmployees() {
+    fetch(`${_spPageContextInfo.webAbsoluteUrl}/_api/web/lists/getbytitle('Employees')/items`, {
+      method: "GET",
+      headers: {
+        "Accept": "application/json;odata=verbose"
+      }
+    })
+    .then(response => response.json())
+    .then(data => {
+      console.log("List Items:", data.d.results);
+      alert("First Employee: " + data.d.results[0].Title); // if you have a 'Title' field
+    })
+    .catch(error => console.error("Error:", error));
+  }
+
+  // Call it on page load or button click
+  window.onload = getEmployees;
+</script>

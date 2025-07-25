@@ -1,0 +1,73 @@
+#changeMe {
+    width: 100;
+    height: 100px;
+    margin: 20px;
+    background: red;
+    margin: 20px auto;
+}
+
+#GetResultBtn {
+    width: 100px;
+    height: 30px;
+    margin: 20px auto;
+    background: rgb(75, 77, 76);
+    color: rgb(225, 233, 235);
+    text-align: center;
+    line-height: 20px;
+    cursor: pointer;
+}
+body {
+    text-align: center;
+    background-color: rgb(199, 201, 183);
+}
+
+input[type="text"],
+input[type="password"] {
+  display: block;
+  margin-left: 0;
+}
+
+.input_w {
+    width: 10%;
+    height: 20px;
+    text-align: right;
+    margin: 5px 0;
+    box-sizing: border-box;
+    background-color: rgb(172, 172, 141);
+}
+
+.result_w {
+    width: 10%;
+    height: 2%;
+    text-align: right;
+      margin: 5px 0;
+    box-sizing: border-box;
+    background-color: rgb(16, 204, 110);
+}
+
+.input_drp {
+    width: 20%;
+    height: 20px;
+    margin: 5px 0;
+    box-sizing: border-box;
+    background-color: rgb(136, 125, 161);
+}
+
+.link_w {
+    color: rgb(235, 176, 94);
+    text-decoration: none;
+    font-weight: bold;
+    background-color: rgb(114, 16, 16);
+    padding: 5px;
+    border-radius: 5px;
+}
+
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background: #f1f1f1;
+  text-align: center;
+  padding: 10px 0;
+}
