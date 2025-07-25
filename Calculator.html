@@ -34,20 +34,20 @@
     <br><br>
 
     <!------------------------------------------  Fetching users from a JSON file (START)-->
-    <input type="button" id="FetchUsers" value="Fetch Users" onclick="fetchUsers()" />
-    <div id="usersList"></div>
-    <script>
-      function fetchUsers() {
-      fetch('users.json')
-        .then(response => response.text())
-        .then(data => {
-        document.getElementById('usersList').innerHTML = data;
-        })
-        .catch(error => {
-        document.getElementById('usersList').innerHTML = 'Error fetching users.';
-        });
-      }
-    </script>
+    <!-- <input type="button" id="FetchUsers" value="Fetch Users" onclick="fetchUsers()" /> -->
+    <!-- <div id="usersList"></div> -->
+    <!-- <script>
+      // function fetchUsers() {
+      // fetch('users.json')
+      //   .then(response => response.text())
+      //   .then(data => {
+      //   document.getElementById('usersList').innerHTML = data;
+      //   })
+      //   .catch(error => {
+      //   document.getElementById('usersList').innerHTML = 'Error fetching users.';
+      //   });
+      // }
+    </script> -->
     <!------------------------------------------ Fetching users from a JSON file (END)-->
 
 
