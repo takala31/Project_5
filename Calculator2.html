@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="Test.js"></script>
+    <link href="styles/mystyles.css" rel="stylesheet" />
+    <title>Document</title>
+    <style>
+        .calculator-container {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+            justify-content: center;
+        }
+        .calculator-box, .calculator-dropdown {
+            padding: 10px;
+            font-size: 16px;
+            width: 80px;
+            box-sizing: border-box;
+        }
+    </style>
+    <script>
+        window.onload = function() {
+            const body = document.body;
+            const container = document.createElement('div');
+            container.className = 'calculator-container';
+
+            const input1 = document.createElement('input');
+            input1.type = 'number';
+            input1.className = 'calculator-box';
+
+            const dropdown = document.createElement('select');
+            dropdown.className = 'calculator-dropdown';
+            ['+', '-', '*', '/'].forEach(op => {
+                const option = document.createElement('option');
+                option.value = op;
+                option.textContent = op;
+                dropdown.appendChild(option);
+            });
+
+            const input2 = document.createElement('input');
+            input2.type = 'number';
+            input2.className = 'calculator-box';
+
+            const button = document.createElement('button');
+            button.textContent = 'Calculate';
+            button.className = 'calculator-box';
+
+            const resultBox = document.createElement('input');
+            resultBox.type = 'text';
+            resultBox.className = 'calculator-box';
+            resultBox.readOnly = true;
+            resultBox.placeholder = 'Result';
+
+            button.onclick = function() {
+                const val1 = parseFloat(input1.value);
+                const val2 = parseFloat(input2.value);
+                const op = dropdown.value;
+                let result = '';
+                if (!isNaN(val1) && !isNaN(val2)) {
+                    switch(op) {
+                        case '+': result = val1 + val2; break;
+                        case '-': result = val1 - val2; break;
+                        case '*': result = val1 * val2; break;
+                        case '/': result = val2 !== 0 ? val1 / val2 : 'Error'; break;
+                    }
+                } else {
+                    result = 'Invalid input';
+                }
+                resultBox.value = result;
+            };
+
+            container.appendChild(input1);
+            container.appendChild(dropdown);
+            container.appendChild(input2);
+            container.appendChild(button);
+            container.appendChild(resultBox);
+
+            body.appendChild(container);
+        };
+    </script>
+</head>
+<body>
+    <!----------------------------------------------------------------------------------------------->
+    <script>
+      fetch("footer.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.body.insertAdjacentHTML("beforeend", data);
+        });
+    </script>
+
+  </body>
+</html>
